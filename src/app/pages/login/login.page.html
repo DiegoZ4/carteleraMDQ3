@@ -1,0 +1,30 @@
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" formControlName="username" placeholder="Ingrese el nombre de usuario"></ion-input>
+          </ion-item>
+          <!-- <input type="text" formControlName="username" placeholder="Ingrese el nombre de usuario"> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" formControlName="password" placeholder="Ingrese el nombre de usuario"></ion-input>
+          </ion-item>
+          <!-- <input type="password" formControlName="password" placeholder="Ingrese la contraseña"> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="login()" [disabled]="form.invalid">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</ion-content>
